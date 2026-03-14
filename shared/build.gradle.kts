@@ -57,5 +57,7 @@ android {
         androidTestImplementation("androidx.test:runner:1.5.2")
 
         androidTestImplementation(kotlin("test"))
+
+        androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.1")
     }
 }
