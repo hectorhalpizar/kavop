@@ -45,8 +45,12 @@ android {
         applicationId = "me.hectorhalpizar.kavop"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
-        versionCode = 1
-        versionName = "1.0"
+
+        val versionMajor = 0
+        val versionMinor = 0
+        val versionRevision = 1
+        versionCode = versionMajor * 10000 + versionMinor * 100 + versionRevision
+        versionName = "$versionMajor.$versionMinor.$versionRevision"
     }
     packaging {
         resources {
