@@ -29,10 +29,10 @@ kotlin {
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
-            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.1")
+            implementation(libs.kotlinx.coroutines.test.v181)
         }
         androidMain.dependencies {
-            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
+            implementation(libs.kotlinx.coroutines.android)
         }
     }
 }
@@ -51,15 +51,15 @@ android {
 
     dependencies {
         // JUnit
-        androidTestImplementation("junit:junit:4.13.2")
+        androidTestImplementation(libs.junit)
 
         // AndroidX Test
-        androidTestImplementation("androidx.test.ext:junit:1.1.5")
-        androidTestImplementation("androidx.test:runner:1.5.2")
+        androidTestImplementation(libs.androidx.junit.v115)
+        androidTestImplementation(libs.androidx.runner)
 
         androidTestImplementation(kotlin("test"))
 
-        androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.1")
-        androidTestImplementation("androidx.test:rules:1.5.0")
+        androidTestImplementation(libs.jetbrains.kotlinx.coroutines.test)
+        androidTestImplementation(libs.androidx.rules)
     }
 }
