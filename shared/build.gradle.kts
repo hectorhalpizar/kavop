@@ -63,5 +63,7 @@ android {
 
         androidTestImplementation(libs.jetbrains.kotlinx.coroutines.test)
         androidTestImplementation(libs.androidx.rules)
+
+        androidTestImplementation(libs.androidx.espresso.intents)
     }
 }
