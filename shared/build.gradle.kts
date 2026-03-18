@@ -52,6 +52,12 @@ android {
     }
 
     dependencies {
+        // Library
+        implementation(libs.androidx.appcompat)
+        implementation(libs.material)
+        implementation(libs.androidx.activity)
+        implementation(libs.androidx.constraintlayout)
+
         // JUnit
         androidTestImplementation(libs.junit)
 
@@ -67,3 +73,4 @@ android {
         androidTestImplementation(libs.androidx.espresso.intents)
     }
 }
+
