@@ -1,4 +1,5 @@
 import org.gradle.kotlin.dsl.androidTestImplementation
+import org.gradle.kotlin.dsl.implementation
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -33,6 +34,7 @@ kotlin {
         }
         androidMain.dependencies {
             implementation(libs.kotlinx.coroutines.android)
+            implementation(libs.androidx.documentfile)
         }
     }
 }
