@@ -71,6 +71,7 @@ android {
         androidTestImplementation(libs.androidx.rules)
 
         androidTestImplementation(libs.androidx.espresso.intents)
+        androidTestImplementation(libs.androidx.espresso.core)
     }
 }
 
