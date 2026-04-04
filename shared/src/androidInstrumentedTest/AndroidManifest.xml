@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <application>
+        <activity
+            android:exported="true"
+            android:label="@string/select_folder"
+            android:theme="@style/TestAppTheme"
+            android:fitsSystemWindows="true"
+            android:name=".ui.SelectFolderActivity">
+
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="testing_app_name">Testing App</string>
+    <string name="folder_selected">Folder Selected: %s</string>
+    <string name="select_folder">Select folder</string>
+</resources>
