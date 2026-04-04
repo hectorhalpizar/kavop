@@ -3,4 +3,6 @@
     <string name="testing_app_name">Testing App</string>
     <string name="folder_selected">Folder Selected: %s</string>
     <string name="select_folder">Select folder</string>
+    <string name="select_file">Select file</string>
+    <string name="file_selected">File selected %s</string>
 </resources>

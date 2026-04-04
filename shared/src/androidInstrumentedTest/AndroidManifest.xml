@@ -15,5 +15,18 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:exported="true"
+            android:label="@string/select_file"
+            android:theme="@style/TestAppTheme"
+            android:fitsSystemWindows="true"
+            android:name=".ui.SelectFileActivity">
+
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
     </application>
 </manifest>
