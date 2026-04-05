@@ -53,6 +53,13 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildTypes {
+        getByName("debug") {
+            enableUnitTestCoverage = true
+            enableAndroidTestCoverage = true
+        }
+    }
+
     dependencies {
         // Library
         implementation(libs.androidx.appcompat)
