@@ -5,6 +5,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
+    id("jacoco")
 }
 
 kotlin {
@@ -84,3 +85,43 @@ android {
     }
 }
 
+jacoco {
+    toolVersion = "0.8.11"
+}
+
+tasks.register<JacocoReport>("jacocoTestReport") {
+
+    reports {
+        xml.required.set(true)
+        html.required.set(true)
+        csv.required.set(false)
+    }
+
+    val fileFilter = listOf(
+        "**/R.class",
+        "**/R$*.class",
+        "**/BuildConfig.*",
+        "**/Manifest*.*",
+        "**/*Test*.*"
+    )
+
+    val debugTree = fileTree("${project.projectDir}/build/tmp/kotlin-classes/debug") {
+        exclude(fileFilter)
+    }
+
+    val mainSrc = files(
+                        "${project.projectDir}/src/main/java",
+                                 "${project.projectDir}/src/commonMain/kotlin",
+                                 "${project.projectDir}/src/androidMain/kotlin"
+                    )
+
+    sourceDirectories.setFrom(mainSrc)
+    classDirectories.setFrom(files(debugTree))
+
+    executionData.setFrom(fileTree(project.projectDir) {
+        include(
+            "build/outputs/unit_test_code_coverage/debugUnitTest/testDebugUnitTest.exec",
+            "/build/outputs/code_coverage/debugAndroidTest/connected/Pixel_8_Pro_API_35_2(AVD) - 15/coverage.ec"
+        )
+    })
+}
