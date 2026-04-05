@@ -28,5 +28,13 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".service.UiAutomatorService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="me.hectorhalpizar.kavop.shared.test.action.SCREEN_DUMP" />
+            </intent-filter>
+        </service>
     </application>
 </manifest>
